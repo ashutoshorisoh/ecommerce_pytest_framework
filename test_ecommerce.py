@@ -23,5 +23,7 @@ def test_e2ecommoerce(browserInvokation, test_data_item):
     shopPage.pick_products(test_data_item["product_name"])
     shopPage.checkout()
     shopPage.address_and_purchase("India")
+    print("title of page is :",shopPage.getBrowserTitle())
     shopPage.success_message()
+
 

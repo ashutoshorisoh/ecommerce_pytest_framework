@@ -1,8 +1,12 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 
-class Shop:
+from util import Browser
+
+
+class Shop(Browser):
     def __init__(self, driver, wait):
+        super().__init__(driver)
         self.shopbtn = (By.XPATH, "//a[normalize-space()='Shop']")
         self.products = (By.XPATH, "//div[@class='card h-100']")
         self.checkOutBtn = (By.XPATH, "//a[contains(text(), 'Checkout')]")
